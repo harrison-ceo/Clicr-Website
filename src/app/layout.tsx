@@ -16,7 +16,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://clicr.co'),
+  metadataBase: new URL('https://clicrapp.com'),
   title: "CLICR | Count. Verify. Report.",
   description: "Unified foot traffic counting, ID scanning, and occupancy management.",
 };
