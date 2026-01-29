@@ -16,7 +16,7 @@ export async function sendEmail(formData: FormData) {
 
     try {
         const { data, error } = await resend.emails.send({
-            from: "CLICR Website <onboarding@resend.dev>", // Default for testing, user should update if they verify domain
+            from: "CLICR Website <noreply@clicr.co>",
             to: ["hello@clicrapp.com"],
             subject: `New Inquiry from ${name} (${venue || "No Venue"})`,
             replyTo: email,
