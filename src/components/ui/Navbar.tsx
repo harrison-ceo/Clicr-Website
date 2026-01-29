@@ -15,6 +15,12 @@ export function Navbar() {
             setScrolled(window.scrollY > 10);
         };
         window.addEventListener("scroll", handleScroll);
+
+        // Force scroll to top on mount if no hash is present
+        if (!window.location.hash) {
+            window.scrollTo(0, 0);
+        }
+
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
