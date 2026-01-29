@@ -16,9 +16,31 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://clicrapp.com'),
+  metadataBase: new URL('https://clicr.co'),
   title: "CLICR | Count. Verify. Report.",
   description: "Unified foot traffic counting, ID scanning, and occupancy management.",
+  openGraph: {
+    title: "CLICR",
+    description: "Crowd Intelligence. Live occupancy + ID scanning.",
+    url: "https://clicr.co",
+    siteName: "CLICR",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "CLICR Crowd Intelligence",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CLICR",
+    description: "Crowd Intelligence. Live occupancy + ID scanning.",
+    images: ["/og-image.jpg"],
+  },
 };
 
 export default function RootLayout({
