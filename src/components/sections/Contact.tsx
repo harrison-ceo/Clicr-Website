@@ -18,16 +18,30 @@ export function Contact() {
         setStatus("sending");
 
         const formDataObj = new FormData(e.currentTarget);
-        const result = await sendEmail(formDataObj);
 
-        if (result.success) {
-            setStatus("sent");
-            setFormData({ name: "", email: "", venue: "", message: "" });
-            setTimeout(() => setStatus("idle"), 5000);
-        } else {
-            console.error(result.error);
+        try {
+            // Add a timeout race condition to prevent indefinite hanging
+            const timeoutPromise = new Promise((_, reject) =>
+                setTimeout(() => reject(new Error("Request timed out")), 15000)
+            );
+
+            const result = await Promise.race([
+                sendEmail(formDataObj),
+                timeoutPromise
+            ]) as { success?: boolean; error?: string };
+
+            if (result.success) {
+                setStatus("sent");
+                setFormData({ name: "", email: "", venue: "", message: "" });
+                // Reset to idle after showing success message
+                setTimeout(() => setStatus("idle"), 5000);
+            } else {
+                throw new Error(result.error || "Failed to send");
+            }
+        } catch (error) {
+            console.error("Form submission error:", error);
             setStatus("idle");
-            alert("Failed to send message. Please try again or email us directly at hello@clicrapp.com");
+            alert("Something went wrong. Please check your connection or email us directly at hello@clicrapp.com");
         }
     };
 
