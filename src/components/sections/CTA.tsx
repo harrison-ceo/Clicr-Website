@@ -1,5 +1,6 @@
 
 import Link from "next/link";
+import { APP_URL } from "@/lib/config";
 
 export function CTA() {
     return (
@@ -20,13 +21,13 @@ export function CTA() {
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                         <Link
-                            href="https://app.clicr.co/login"
+                            href={`${APP_URL}/login`}
                             className="px-8 py-4 rounded-full text-lg font-bold bg-background text-foreground hover:bg-background/90 transition-colors inline-block"
                         >
                             Create Free Account
                         </Link>
                         <Link
-                            href="https://app.clicr.co/demo"
+                            href={`${APP_URL}/demo`}
                             className="px-8 py-4 rounded-full text-lg font-bold border border-background/20 hover:bg-background/10 transition-colors inline-block"
                         >
                             Try Demo First

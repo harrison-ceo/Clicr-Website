@@ -4,6 +4,7 @@ import { ArrowRight, BarChart3, ScanFace, Users, Globe, ShieldCheck } from "luci
 import { PhoneShowcase } from "@/components/ui/PhoneShowcase";
 import { CountTicker, SetupTicker } from "@/components/ui/Tickers";
 import Link from "next/link";
+import { APP_URL } from "@/lib/config";
 
 export function Hero() {
     const handleContactClick = (e: React.MouseEvent) => {
@@ -64,13 +65,13 @@ export function Hero() {
                 {/* CTAs */}
                 <div className="flex flex-col sm:flex-row gap-4 mt-4 w-full justify-center">
                     <Link
-                        href="https://app.clicr.co/login"
+                        href={`${APP_URL}/login`}
                         className="bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-full text-base font-semibold transition-all hover:scale-105 shadow-[0_0_20px_rgba(99,102,241,0.3)] flex items-center justify-center"
                     >
                         Start Free Trial
                     </Link>
                     <Link
-                        href="https://app.clicr.co/demo"
+                        href={`${APP_URL}/demo`}
                         className="px-8 py-4 rounded-full text-base font-semibold border border-white/10 hover:bg-white/5 transition-colors flex items-center justify-center gap-2 group"
                     >
                         View Interactive Demo
