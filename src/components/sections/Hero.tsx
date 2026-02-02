@@ -2,6 +2,7 @@
 
 import { ArrowRight, BarChart3, ScanFace, Users, Globe, ShieldCheck } from "lucide-react";
 import { PhoneShowcase } from "@/components/ui/PhoneShowcase";
+import { CountTicker, SetupTicker } from "@/components/ui/Tickers";
 import Link from "next/link";
 
 export function Hero() {
@@ -29,19 +30,23 @@ export function Hero() {
 
                 {/* Chips */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-2 w-fit mx-auto justify-items-center">
-                    <div className="glass-chip flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium border border-white/10 bg-white/5 backdrop-blur-md whitespace-nowrap">
+                    <div className="glass-chip flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium border border-white/10 bg-white/5 backdrop-blur-md whitespace-nowrap min-w-[200px] justify-center">
                         <Users className="w-4 h-4 text-accent" />
-                        <span>1.5M+ Guests Counted</span>
+                        <span className="flex items-center gap-1">
+                            <CountTicker from={50000} to={1500000} /> Guests Counted
+                        </span>
                     </div>
-                    <div className="glass-chip flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium border border-white/10 bg-white/5 backdrop-blur-md whitespace-nowrap">
+                    <div className="glass-chip flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium border border-white/10 bg-white/5 backdrop-blur-md whitespace-nowrap min-w-[200px] justify-center">
                         <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                         <span>Real-time Occupancy</span>
                     </div>
-                    <div className="glass-chip flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium border border-white/10 bg-white/5 backdrop-blur-md whitespace-nowrap">
+                    <div className="glass-chip flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium border border-white/10 bg-white/5 backdrop-blur-md whitespace-nowrap min-w-[200px] justify-center">
                         <Globe className="w-4 h-4 text-accent" />
-                        <span>View from Anywhere in the World</span>
+                        <span className="flex items-center gap-1">
+                            <SetupTicker /> Setup
+                        </span>
                     </div>
-                    <div className="glass-chip flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium border border-white/10 bg-white/5 backdrop-blur-md whitespace-nowrap">
+                    <div className="glass-chip flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium border border-white/10 bg-white/5 backdrop-blur-md whitespace-nowrap min-w-[200px] justify-center">
                         <ShieldCheck className="w-4 h-4 text-accent" />
                         <span>Capacity Compliance Ready</span>
                     </div>
