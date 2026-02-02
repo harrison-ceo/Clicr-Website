@@ -12,13 +12,13 @@ export function About() {
         {
             name: "Harrison Wilkins",
             role: "Co-Founder & CEO",
-            bio: "Harrison has spent the last 10 years in hospitality operations and brings a Service Design background to product execution. He focuses on turning messy, manual venue workflows into simple tools operators actually want to use—without slowing down the night.",
+            bio: "Harrison has spent the last 10 years in hospitality operations and brings a Service Design background to product execution. He focuses on turning messy, manual venue workflows into simple tools operators actually want to use, without slowing down the night.",
             image: "/team/harrison.png"
         },
         {
             name: "Lucas Martinez",
             role: "COO",
-            bio: "Lucas comes from fast-moving startup environments, leading coordination, user outreach, and networking—especially in AI-focused teams. With a degree in Service Design, he helps CLICR stay close to users and iterate quickly based on real operator feedback.",
+            bio: "Lucas comes from fast-moving startup environments, leading coordination, user outreach, and networking, especially in AI-focused teams. With a degree in Service Design, he helps CLICR stay close to users and iterate quickly based on real operator feedback.",
             image: "/team/lucas.png"
         },
     ];

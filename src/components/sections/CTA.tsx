@@ -15,7 +15,7 @@ export function CTA() {
                         Run smoother nights. Stay compliant.
                     </h2>
                     <p className="text-lg text-background/70 max-w-2xl mx-auto">
-                        Use the MVP free for feedback—built to help teams track occupancy, support fire marshal compliance, and avoid fines.
+                        Use the MVP free for feedback, built to help teams track occupancy, support fire marshal compliance, and avoid fines.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">

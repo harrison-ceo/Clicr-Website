@@ -53,7 +53,7 @@ export function Hero() {
                 </h1>
 
                 <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-                    CLICR—<span className="text-xl md:text-2xl font-semibold text-white">counters that communicate</span>. Live occupancy from anywhere. ID scanning and exportable reporting. Built for compliance and lowering risk.
+                    CLICR: <span className="text-xl md:text-2xl font-semibold text-white">counters that communicate</span>. Live occupancy from anywhere. ID scanning and exportable reporting. Built for compliance and lowering risk.
                 </p>
 
                 {/* CTAs */}
