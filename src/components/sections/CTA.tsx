@@ -19,13 +19,18 @@ export function CTA() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-                        {/* Get in touch button removed */}
-                        <a
-                            href="mailto:hello@clicrapp.com"
+                        <Link
+                            href="https://app.clicr.co/login"
+                            className="px-8 py-4 rounded-full text-lg font-bold bg-background text-foreground hover:bg-background/90 transition-colors inline-block"
+                        >
+                            Create Free Account
+                        </Link>
+                        <Link
+                            href="https://app.clicr.co/demo"
                             className="px-8 py-4 rounded-full text-lg font-bold border border-background/20 hover:bg-background/10 transition-colors inline-block"
                         >
-                            Email us
-                        </a>
+                            Try Demo First
+                        </Link>
                     </div>
                 </div>
             </div>

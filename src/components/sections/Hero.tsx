@@ -59,17 +59,16 @@ export function Hero() {
                 {/* CTAs */}
                 <div className="flex flex-col sm:flex-row gap-4 mt-4 w-full justify-center">
                     <Link
-                        href="/#contact"
-                        onClick={handleContactClick}
+                        href="https://app.clicr.co/login"
                         className="bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-full text-base font-semibold transition-all hover:scale-105 shadow-[0_0_20px_rgba(99,102,241,0.3)] flex items-center justify-center"
                     >
-                        Get in touch
+                        Start Free Trial
                     </Link>
                     <Link
-                        href="#how"
+                        href="https://app.clicr.co/demo"
                         className="px-8 py-4 rounded-full text-base font-semibold border border-white/10 hover:bg-white/5 transition-colors flex items-center justify-center gap-2 group"
                     >
-                        See how it works
+                        View Interactive Demo
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
                 </div>
