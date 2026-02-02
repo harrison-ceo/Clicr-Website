@@ -92,7 +92,7 @@ export function Navbar() {
                 {/* CTA (Right) */}
                 <div className="flex items-center gap-4 z-20">
                     <Link
-                        href={APP_URL}
+                        href={`${APP_URL}/login`}
                         className="bg-accent hover:bg-accent/90 text-white px-4 md:px-5 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-medium transition-all hover:shadow-[0_0_15px_rgba(99,102,241,0.4)] active:scale-95 whitespace-nowrap"
                     >
                         Start Free Trial
