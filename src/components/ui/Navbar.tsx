@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { APP_URL } from "@/lib/config";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -77,7 +78,7 @@ export function Navbar() {
                         </Link>
                     ))}
                     <Link
-                        href="https://app.clicr.co/demo"
+                        href={`${APP_URL}/demo`}
                         className="text-accent hover:text-white transition-colors font-bold flex items-center gap-1"
                     >
                         <span className="relative flex h-2 w-2">
@@ -91,7 +92,7 @@ export function Navbar() {
                 {/* CTA (Right) */}
                 <div className="flex items-center gap-4 z-20">
                     <Link
-                        href="https://app.clicr.co/login"
+                        href={APP_URL}
                         className="bg-accent hover:bg-accent/90 text-white px-4 md:px-5 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-medium transition-all hover:shadow-[0_0_15px_rgba(99,102,241,0.4)] active:scale-95 whitespace-nowrap"
                     >
                         Start Free Trial
