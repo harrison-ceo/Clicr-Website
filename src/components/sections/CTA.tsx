@@ -23,7 +23,7 @@ export function CTA() {
                             href="https://app.clicr.co/login"
                             className="px-8 py-4 rounded-full text-lg font-bold bg-background text-foreground hover:bg-background/90 transition-colors inline-block"
                         >
-                            Create Free Account
+                            Get Started
                         </Link>
                         <Link
                             href="https://app.clicr.co/demo"

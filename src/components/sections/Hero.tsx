@@ -62,7 +62,7 @@ export function Hero() {
                         href="https://app.clicr.co/login"
                         className="bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-full text-base font-semibold transition-all hover:scale-105 shadow-[0_0_20px_rgba(99,102,241,0.3)] flex items-center justify-center"
                     >
-                        Start Free Trial
+                        Get Started
                     </Link>
                     <Link
                         href="https://app.clicr.co/demo"
