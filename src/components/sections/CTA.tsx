@@ -1,5 +1,6 @@
 
 import Link from "next/link";
+import { APP_URL } from "@/lib/config";
 
 export function CTA() {
     return (
@@ -15,18 +16,18 @@ export function CTA() {
                         Run smoother nights. Stay compliant.
                     </h2>
                     <p className="text-lg text-background/70 max-w-2xl mx-auto">
-                        Use the MVP free for feedback—built to help teams track occupancy, support fire marshal compliance, and avoid fines.
+                        Use the MVP free for feedback, built to help teams track occupancy, support fire marshal compliance, and avoid fines.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                         <Link
-                            href="https://app.clicr.co/login"
+                            href={`${APP_URL}/login`}
                             className="px-8 py-4 rounded-full text-lg font-bold bg-background text-foreground hover:bg-background/90 transition-colors inline-block"
                         >
                             Get Started
                         </Link>
                         <Link
-                            href="https://app.clicr.co/demo"
+                            href={`${APP_URL}/demo`}
                             className="px-8 py-4 rounded-full text-lg font-bold border border-background/20 hover:bg-background/10 transition-colors inline-block"
                         >
                             Try Demo First

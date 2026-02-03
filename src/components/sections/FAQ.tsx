@@ -8,7 +8,7 @@ export function FAQ() {
         { q: "Can we export reports?", a: "Yes. Export detailed CSV or PDF reports for clients, fire marshals, or compliance audits instantly." },
         { q: "How does ID scanning work?", a: "We use the device's camera to scan barcodes on IDs, verifying age and logging entry times securely." },
         { q: "How fast is setup?", a: "You can create a venue and invite staff in under 10 minutes." },
-        { q: "How does CLICR help with fire marshal compliance?", a: "CLICR provides live occupancy visibility across staff so teams can stay within capacity. It also offers exportable reporting to support compliance checks and audits—helping you reduce risk and stay prepared." },
+        { q: "How does CLICR help with fire marshal compliance?", a: "CLICR provides live occupancy visibility across staff so teams can stay within capacity. It also offers exportable reporting to support compliance checks and audits, helping you reduce risk and stay prepared." },
     ];
 
     return (

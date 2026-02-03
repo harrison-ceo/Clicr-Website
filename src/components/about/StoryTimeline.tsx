@@ -5,7 +5,7 @@ export function StoryTimeline() {
         {
             title: "Where We Came From",
             icon: Lightbulb,
-            content: "We've worked the doors, managed teams, and operated venues. We needed live occupancy + clean ID verification + real reporting—without clunky, disconnected tools. Nothing existed that actually fit how venues run, so we built it."
+            content: "We've worked the doors, managed teams, and operated venues. We needed live occupancy + clean ID verification + real reporting, without clunky, disconnected tools. Nothing existed that actually fit how venues run, so we built it."
         },
         {
             title: "Where We Are",
@@ -15,7 +15,7 @@ export function StoryTimeline() {
         {
             title: "Where We're Going",
             icon: Rocket,
-            content: "We're pushing toward two major expansions: (1) Hardware: purpose-built handheld devices that make counting + verification effortless. (2) AI Manager Assistant: an intelligent assistant that thinks like an owner/manager—turning foot traffic + demographic patterns into staffing, compliance, and programming decisions."
+            content: "We're pushing toward two major expansions: (1) Hardware: purpose-built handheld devices that make counting + verification effortless. (2) AI Manager Assistant: an intelligent assistant that thinks like an owner/manager, turning foot traffic + demographic patterns into staffing, compliance, and programming decisions."
         }
     ];
 

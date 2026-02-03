@@ -20,7 +20,7 @@ export function HowWeWork() {
         {
             icon: BarChart3,
             title: "Data that's actually usable",
-            description: "Clear charts, simple insights—no jargon, no clutter."
+            description: "Clear charts, simple insights, no jargon, no clutter."
         }
     ];
 

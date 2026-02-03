@@ -1,0 +1,1 @@
+export const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://clicr-app-q1bn.vercel.app";
