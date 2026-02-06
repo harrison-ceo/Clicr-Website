@@ -38,10 +38,10 @@ export function Contact() {
             } else {
                 throw new Error(result.error || "Failed to send");
             }
-        } catch (error) {
+        } catch (error: any) {
             console.error("Form submission error:", error);
             setStatus("idle");
-            alert("Something went wrong. Please check your connection or email us directly at hello@clicrapp.com");
+            alert(`Error: ${error.message || "Something went wrong."} \n\nPlease email us directly at hello@clicrapp.com`);
         }
     };
 

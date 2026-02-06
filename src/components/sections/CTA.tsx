@@ -21,10 +21,10 @@ export function CTA() {
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                         <Link
-                            href={`${APP_URL}/login`}
+                            href="https://apps.apple.com/us/app/clicr-venue-occupancy/id6739883262"
                             className="px-8 py-4 rounded-full text-lg font-bold bg-background text-foreground hover:bg-background/90 transition-colors inline-block"
                         >
-                            Get Started
+                            Download on App Store
                         </Link>
                         <Link
                             href={`${APP_URL}/demo`}

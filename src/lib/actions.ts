@@ -36,12 +36,12 @@ ${message}
 
         if (error) {
             console.error("Resend error:", error);
-            return { error: "Failed to send email. Please try again." };
+            return { error: error.message || "Failed to send email." };
         }
 
         return { success: true };
-    } catch (e) {
+    } catch (e: any) {
         console.error("Server action error:", e);
-        return { error: "Something went wrong. Please try again." };
+        return { error: e.message || "Something went wrong." };
     }
 }
