@@ -65,7 +65,7 @@ export function Hero() {
                 {/* CTAs */}
                 <div className="flex flex-col sm:flex-row gap-4 mt-4 w-full justify-center">
                     <Link
-                        href="https://apps.apple.com/us/app/clicr-venue-occupancy/id6739883262"
+                        href="https://apps.apple.com/us/app/clicr/id1633722056"
                         className="bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-full text-base font-semibold transition-all hover:scale-105 shadow-[0_0_20px_rgba(99,102,241,0.3)] flex items-center justify-center"
                     >
                         Download on App Store

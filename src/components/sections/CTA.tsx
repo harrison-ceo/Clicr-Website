@@ -21,7 +21,7 @@ export function CTA() {
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                         <Link
-                            href="https://apps.apple.com/us/app/clicr-venue-occupancy/id6739883262"
+                            href="https://apps.apple.com/us/app/clicr/id1633722056"
                             className="px-8 py-4 rounded-full text-lg font-bold bg-background text-foreground hover:bg-background/90 transition-colors inline-block"
                         >
                             Download on App Store
