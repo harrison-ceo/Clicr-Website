@@ -24,10 +24,8 @@ export default function DemoLayout({ children }: { children: React.ReactNode }) 
                 <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
                     <div className="flex items-center gap-4">
                         <Link href="/" className="flex items-center gap-2 group">
-                            <div className="w-8 h-8 rounded-lg bg-indigo-500/20 flex items-center justify-center border border-indigo-500/30 group-hover:bg-indigo-500/30 transition-colors">
-                                <span className="font-bold text-indigo-400">C</span>
-                            </div>
-                            <span className="font-bold tracking-tight hidden sm:block">CLICR <span className="text-white/40 font-normal">Next Demo</span></span>
+                            <img src="/logo-white.png" alt="CLICR" className="h-8 w-auto object-contain" />
+                            <span className="font-bold tracking-tight hidden sm:block text-white/40 font-normal">Next Demo</span>
                         </Link>
                     </div>
 
