@@ -27,7 +27,7 @@ export function CTA() {
                             Download on App Store
                         </Link>
                         <Link
-                            href={`${APP_URL}/demo`}
+                            href="/demo"
                             className="px-8 py-4 rounded-full text-lg font-bold border border-background/20 hover:bg-background/10 transition-colors inline-block"
                         >
                             Try Demo First

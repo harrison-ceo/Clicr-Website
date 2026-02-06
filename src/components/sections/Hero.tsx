@@ -71,7 +71,7 @@ export function Hero() {
                         Download on App Store
                     </Link>
                     <Link
-                        href={`${APP_URL}/demo`}
+                        href="/demo"
                         className="px-8 py-4 rounded-full text-base font-semibold border border-white/10 hover:bg-white/5 transition-colors flex items-center justify-center gap-2 group"
                     >
                         View Interactive Demo

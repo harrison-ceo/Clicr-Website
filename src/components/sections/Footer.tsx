@@ -61,6 +61,14 @@ export function Footer() {
                                 How it Works
                             </Link>
                         </li>
+                        <li>
+                            <Link
+                                href="/demo"
+                                className="hover:text-foreground font-bold text-accent"
+                            >
+                                Interactive Demo
+                            </Link>
+                        </li>
                     </ul>
                 </div>
 

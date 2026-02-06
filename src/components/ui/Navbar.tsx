@@ -78,7 +78,7 @@ export function Navbar() {
                         </Link>
                     ))}
                     <Link
-                        href={`${APP_URL}/demo`}
+                        href="/demo"
                         className="text-accent hover:text-white transition-colors font-bold flex items-center gap-1"
                     >
                         <span className="relative flex h-2 w-2">
