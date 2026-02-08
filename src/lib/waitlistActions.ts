@@ -65,6 +65,6 @@ Source: Marketing Site Waitlist Form
     } catch (e: any) {
         console.error("Waitlist Error:", e);
         // Fail gracefully with a generic message
-        return { error: "Something went wrong. Please try again later." };
+        return { error: `Error: ${e.message}` };
     }
 }
