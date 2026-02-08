@@ -8,7 +8,7 @@ import { Resend } from "resend";
     - Checks honeypot (Anti-spam)
     - Sends email notification to hello@clicrapp.com
 */
-export async function submitWaitlist(formData: FormData) {
+export async function submitWaitlist(prevState: any, formData: FormData) {
     const name = formData.get("name") as string;
     const business = formData.get("business") as string;
     const email = formData.get("email") as string;
