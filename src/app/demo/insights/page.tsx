@@ -170,10 +170,10 @@ export default function InsightsDemo() {
                         Back to Home
                     </Link>
                     <Link
-                        href="/contact"
-                        className="px-6 py-3 rounded-full bg-white text-black font-bold hover:bg-white/90 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.2)]"
+                        href="/v4-waitlist"
+                        className="px-6 py-3 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold transition-colors shadow-[0_0_20px_rgba(99,102,241,0.2)]"
                     >
-                        Book a Real Demo
+                        Join V4 Waitlist
                     </Link>
                 </div>
             </div>
