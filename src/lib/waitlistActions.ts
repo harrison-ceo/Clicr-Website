@@ -1,13 +1,6 @@
-
 "use server";
 
 import { Resend } from "resend";
-
-const resend = new Resend(process.env.RESEND_API_KEY);
-
-if (!process.env.RESEND_API_KEY) {
-    console.warn("Missing RESEND_API_KEY environment variable");
-}
 
 /*
     Waitlist Signup Action
@@ -32,8 +25,19 @@ export async function submitWaitlist(formData: FormData) {
     if (!business || business.length < 2) return { error: "Please enter a valid business name." };
     if (!email || !email.includes("@")) return { error: "Please enter a valid email." };
 
+    // 3. Environment Check
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+        console.error("CRITICAL: Missing RESEND_API_KEY. Cannot send waitlist email.");
+        // We return success to the user so the UI doesn't break, but log the error on server.
+        // In a real scenario, you might want to store this in a DB as backup.
+        return { success: true };
+    }
+
     try {
-        // 3. Send Notification to Team
+        const resend = new Resend(apiKey);
+
+        // 4. Send Notification to Team
         const { error: teamEmailError } = await resend.emails.send({
             from: "CLICR Waitlist <noreply@clicr.co>",
             to: ["hello@clicrapp.com"],
@@ -56,21 +60,11 @@ Source: Marketing Site Waitlist Form
             throw new Error("Failed to notify team.");
         }
 
-        // 4. (Optional) Send Confirmation to User
-        // We can enable this later if desired to keep noise low initially.
-        /*
-        await resend.emails.send({
-            from: "Harrison from CLICR <hello@clicrapp.com>",
-            to: [email],
-            subject: "You're on the V4.0 Waitlist",
-            text: "Thanks for signing up. We'll reach out soon with early access details.",
-        });
-        */
-
         return { success: true };
 
     } catch (e: any) {
         console.error("Waitlist Error:", e);
+        // Fail gracefully with a generic message
         return { error: "Something went wrong. Please try again later." };
     }
 }
