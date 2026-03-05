@@ -14,6 +14,8 @@ const initialState = {
 export default function WaitlistPage() {
     const [state, formAction, isPending] = useActionState(submitWaitlist, initialState as any);
     const [success, setSuccess] = useState(false);
+    const [timing, setTiming] = useState("");
+    const [waitingFor, setWaitingFor] = useState("");
 
     useEffect(() => {
         if (state?.success) {
@@ -137,6 +139,57 @@ export default function WaitlistPage() {
                                         className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/50 transition-all font-medium"
                                     />
                                 </div>
+
+                                <div>
+                                    <label htmlFor="timing" className="block text-sm font-medium text-white/80 mb-1.5 ml-1">When would you use CLICR?</label>
+                                    <select
+                                        id="timing"
+                                        name="timing"
+                                        required
+                                        value={timing}
+                                        onChange={(e) => setTiming(e.target.value)}
+                                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/50 transition-all font-medium appearance-none"
+                                    >
+                                        <option value="" disabled>Select an option</option>
+                                        <option value="Ready to try it now">Ready to try it now</option>
+                                        <option value="Interested, but not yet">Interested, but not yet</option>
+                                    </select>
+                                </div>
+
+                                {timing === "Interested, but not yet" && (
+                                    <div className="animate-in fade-in slide-in-from-top-2">
+                                        <label htmlFor="waiting_for" className="block text-sm font-medium text-white/80 mb-1.5 ml-1">What are you waiting for?</label>
+                                        <select
+                                            id="waiting_for"
+                                            name="waiting_for"
+                                            required
+                                            value={waitingFor}
+                                            onChange={(e) => setWaitingFor(e.target.value)}
+                                            className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/50 transition-all font-medium appearance-none"
+                                        >
+                                            <option value="" disabled>Select an option</option>
+                                            <option value="ID scanning is live">ID scanning is live</option>
+                                            <option value="Works with our existing/external scanner">Works with our existing/external scanner</option>
+                                            <option value="CLICR hardware device is available">CLICR hardware device is available</option>
+                                            <option value="Need pricing / approval first">Need pricing / approval first</option>
+                                            <option value="Other">Other (short text)</option>
+                                        </select>
+                                    </div>
+                                )}
+
+                                {waitingFor === "Other" && timing === "Interested, but not yet" && (
+                                    <div className="animate-in fade-in slide-in-from-top-2 mt-4">
+                                        <label htmlFor="waiting_for_other" className="block text-sm font-medium text-white/80 mb-1.5 ml-1">Please specify</label>
+                                        <input
+                                            type="text"
+                                            id="waiting_for_other"
+                                            name="waiting_for_other"
+                                            required
+                                            placeholder="What are you waiting for?"
+                                            className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/50 transition-all font-medium"
+                                        />
+                                    </div>
+                                )}
                             </div>
 
                             {state?.error && (
@@ -156,7 +209,7 @@ export default function WaitlistPage() {
                                         Joining...
                                     </>
                                 ) : (
-                                    "Join Waitlist"
+                                    timing === "Ready to try it now" ? "Request Pilot Access" : "Join Waitlist"
                                 )}
                             </button>
 

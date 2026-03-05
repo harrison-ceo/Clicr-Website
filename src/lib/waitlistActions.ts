@@ -13,6 +13,9 @@ export async function submitWaitlist(prevState: any, formData: FormData) {
     const business = formData.get("business") as string;
     const email = formData.get("email") as string;
     const honeypot = formData.get("clicr_hp") as string; // Honeypot field
+    const timing = formData.get("timing") as string;
+    const waiting_for = formData.get("waiting_for") as string;
+    const waiting_for_other = formData.get("waiting_for_other") as string;
 
     // 1. Spam Protection: Honeypot must be empty
     if (honeypot) {
@@ -24,6 +27,13 @@ export async function submitWaitlist(prevState: any, formData: FormData) {
     if (!name || name.length < 2) return { error: "Please enter a valid name." };
     if (!business || business.length < 2) return { error: "Please enter a valid business name." };
     if (!email || !email.includes("@")) return { error: "Please enter a valid email." };
+    if (!timing) return { error: "Please select when you would use CLICR." };
+
+    let finalWaitingFor = "";
+    if (timing === "Interested, but not yet") {
+        if (!waiting_for) return { error: "Please select what you are waiting for." };
+        finalWaitingFor = waiting_for === "Other" ? waiting_for_other : waiting_for;
+    }
 
     // 3. Environment Check
     const apiKey = process.env.RESEND_API_KEY;
@@ -49,6 +59,8 @@ New V4.0 Waitlist Signup!
 Name: ${name}
 Business: ${business}
 Email: ${email}
+Timing: ${timing}
+${timing === "Interested, but not yet" ? `Waiting For: ${finalWaitingFor}` : ""}
 Timestamp: ${new Date().toISOString()}
 
 Source: Marketing Site Waitlist Form
