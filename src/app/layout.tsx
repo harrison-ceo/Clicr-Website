@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://clicr.co'),
   title: "CLICR | Count. Verify. Report.",
   description: "Unified foot traffic counting, ID scanning, and occupancy management.",
+  icons: {
+    icon: "/favicon.png",
+  },
   openGraph: {
     title: "CLICR",
     description: "Crowd Intelligence. Live occupancy + ID scanning.",
